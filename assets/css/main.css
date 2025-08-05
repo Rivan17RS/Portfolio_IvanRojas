@@ -2121,7 +2121,7 @@ input, select, textarea {
 		}
 
 		#logo .image {
-			position: absolute;
+			position: sticky;
 			left: 0;
 			top: 0;
 		}
