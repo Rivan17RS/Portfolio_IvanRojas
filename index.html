@@ -89,26 +89,37 @@
     <section id="about" class="section alt">
       <h2>About Me</h2>
       <p>
-        I'm a hybrid developer and SRE engineer who connects clean code with
-        real operational impact. I’ve built automation pipelines, dashboards,
-        and scalable cloud systems that improved performance and reduced manual work.
+        I'm a hybrid Software Developer and Site Reliability Engineer who bridges the gap between application development 
+		and operational excellence. With experience in .NET web development, full-stack JavaScript (Node.js and React), 
+		and infrastructure automation, I design solutions that are not only functional, but scalable, reliable, and measurable.
+
+		Throughout my career, I've led automation initiatives using tools like Ansible and monitoring platforms, reducing 
+		repetitive operational workload by more than 60 hours per month. I've built performance dashboards and internal 
+		web tools that increased visibility into system health and directly contributed to a 35% improvement in client retention.
+
+		My strength lies in connecting clean, maintainable code with real business outcomes. 
+		I thrive in environments where engineering meets operations — optimizing processes, improving reliability, 
+		and turning manual workflows into efficient, automated systems that scale.
       </p>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <h2>Let’s Work Together</h2>
-      <p>Open to full-time roles, freelance work, or collaborations.</p>
+	<!-- Contact -->
+	<section id="contact" class="section">
+	<h2>Let's Work Together</h2>
+	<p>Open to full-time roles, freelance work, or collaborations.</p>
 
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </section>
+	<form id="contact-form">
+		<input type="text" name="name" placeholder="Your Name" required>
+		<input type="email" name="email" placeholder="Your Email" required>
+		<textarea name="message" placeholder="Your Message" required></textarea>
+		<button type="submit" class="btn">Send Message</button>
+	</form>
+
+	<p id="form-status" style="margin-top:10px;"></p>
+	</section>
 
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 </body>
 </html>
