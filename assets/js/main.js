@@ -4,7 +4,7 @@
 
 (function($) {
 
-	var	$window = $(window),
+	var $window = $(window),
 		$body = $('body'),
 		$nav = $('#nav');
 
@@ -27,34 +27,73 @@
 	// Scrolly
 	$('.scrolly').scrolly();
 
+
 	// Contact Form - EmailJS
 	(function () {
-	emailjs.init("P666zB8mT-Vr6UtaE"); // <-- EmailJS PUBLIC APIKEY
 
-	const form = document.getElementById("contact-form");
-	const status = document.getElementById("form-status");
+		// Initialize EmailJS (PUBLIC KEY)
+		emailjs.init("P666zB8mT-Vr6UtaE");
 
-	if (!form) return;
+		const form = document.getElementById("contact-form");
+		const status = document.getElementById("form-status");
+
+		if (!form) return;
+
+		const button = form.querySelector("button");
 
 		form.addEventListener("submit", function (e) {
+
 			e.preventDefault();
 
+			// Prevent double submit
+			button.disabled = true;
+
+			// Reset status state
+			status.classList.remove("success", "error");
+			status.style.opacity = 1;
 			status.innerText = "Sending message...";
 
 			emailjs.sendForm(
-			"service_a4twy6d",     // <-- service email linked in EmailJS
-			"template_xdjk815",    // <-- template created in EmailJS (I used "Contact Us" template)
-			this
-			).then(
-			function () { // Success callback
-				status.innerText = "Message sent successfully! I will get back to you soon.";
+				"service_a4twy6d", // EmailJS Service ID
+				"template_xdjk815", // EmailJS Template ID
+				form
+			)
+			.then(function () {
+
+				status.classList.remove("error");
+				status.classList.add("success");
+
+				status.style.opacity = 0;
+
+				setTimeout(function () {
+					status.innerText = "Message sent successfully! I will get back to you soon.";
+					status.style.opacity = 1;
+				}, 150);
+
 				form.reset();
-			},
-			function (error) {
+				button.disabled = false;
+
+			})
+			.catch(function (error) {
+
 				console.error("EmailJS Error:", error);
-				status.innerText = "Failed to send message. Please try again later.";
-			}
-			);
+
+				status.classList.remove("success");
+				status.classList.add("error");
+
+				status.style.opacity = 0;
+
+				setTimeout(function () {
+					status.innerText = "Failed to send message. Please try again later.";
+					status.style.opacity = 1;
+				}, 150);
+
+				button.disabled = false;
+
+			});
+
 		});
+
 	})();
+
 })(jQuery);

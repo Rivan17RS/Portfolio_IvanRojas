@@ -328,3 +328,22 @@ textarea {
   transform: translateY(-6px);
   box-shadow: 0 18px 40px rgba(0,0,0,0.08);
 }
+
+/* Form Status Messages */
+#form-status {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+#form-status.success {
+  color: #16a34a; /* green-600 */
+}
+
+#form-status.error {
+  color: #dc2626; /* red-600 */
+}
+
+#form-status {
+  transition: opacity 0.3s ease;
+}
