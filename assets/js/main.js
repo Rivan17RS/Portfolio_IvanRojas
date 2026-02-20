@@ -28,30 +28,34 @@
 	$('.scrolly').scrolly();
 
 	// Contact Form - EmailJS
-	emailjs.init("P666zB8mT-Vr6UtaE");
+	(function () {
+	emailjs.init("P666zB8mT-Vr6UtaE"); // <-- EmailJS PUBLIC APIKEY
 
 	const form = document.getElementById("contact-form");
 	const status = document.getElementById("form-status");
 
-	if (form) {
+	if (!form) return;
+
 		form.addEventListener("submit", function (e) {
 			e.preventDefault();
 
-			status.innerHTML = "Sending...";
-			status.style.color = "#888";
+			status.innerText = "Sending message...";
 
-			emailjs.sendForm("service_a4twy6d", "template_xzyml26", this)
-				.then(function () {
-					status.innerHTML = "Message sent successfully!";
-					status.style.color = "green";
-					form.reset();
-				})
-				.catch(function (error) {
-					console.error("EmailJS Error:", error);
-					status.innerHTML = "Something went wrong. Please try again.";
-					status.style.color = "red";
-				});
+			emailjs.sendForm(
+			"service_a4twy6d",     // <-- service email linked in EmailJS
+			"template_xdjk815",    // <-- template created in EmailJS (I used "Contact Us" template)
+			this
+			).then(
+			function () { // Success callback
+				status.innerText = "Message sent successfully! I will get back to you soon.";
+				form.reset();
+			},
+			function (error) {
+				console.error("EmailJS Error:", error);
+				status.innerText = "Failed to send message. Please try again later.";
+			}
+			);
 		});
-	}
+	})();
 
 })(jQuery);
