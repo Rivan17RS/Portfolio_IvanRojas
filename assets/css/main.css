@@ -230,7 +230,7 @@ textarea {
 #certifications p {
   max-width: 800px;
   margin: 0 auto 2.5em auto;
-  text-align: center;
+  text-align: left;
   font-size: 0.95em;
   color: #666;
   padding: 0 1em;
