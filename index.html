@@ -35,16 +35,27 @@
   <!-- Main Content -->
   <main>
 
-    <!-- Hero -->
+    <!-- Hero WITH PHOTO -->
     <section id="hero" class="hero">
-      <h2>Hi, I'm <span>Ivan</span></h2>
-      <p>
-        I build scalable web applications and automate infrastructure.
-        I focus on performance, clean UX, and systems that save teams time.
-      </p>
-      <a href="assets/files/2026-IvanRojas-Resume.pdf" class="btn" download>
-        Download Resume
-      </a>
+      <div class="hero-content">
+
+        <div class="hero-text">
+          <h2>Hi, I'm <span>Ivan</span></h2>
+          <p>
+            I build scalable web applications and automate infrastructure.
+            I focus on performance, clean UX, and systems that save teams time.
+          </p>
+          <a href="assets/files/2026-IvanRojas-Resume.pdf" class="btn" download>
+            Download Resume
+          </a>
+        </div>
+
+        <div class="hero-image">
+          <!-- Replace with your real photo -->
+          <img src="images/profile.jpg" alt="Ivan Rojas">
+        </div>
+
+      </div>
     </section>
 
     <!-- Portfolio -->
@@ -56,53 +67,96 @@
         <div class="card">
           <img src="images/pic02.png" alt="Web App">
           <h3>To-Do List</h3>
-          <p>Developed a lightweight task management Web application using pure JavaScript, leveraging localStorage 
-			for persistent client-side data management. Demonstrates strong understanding of DOM manipulation, 
-			event handling, state management, and modular frontend architecture without relying on frameworks.</p>
+          <div class="badges">
+            <span>JavaScript</span>
+            <span>DOM</span>
+            <span>LocalStorage</span>
+            <span>Frontend</span>
+          </div>
+          <p>
+            Developed a lightweight task management Web application using pure JavaScript,
+            leveraging localStorage for persistent client-side data management and dynamic DOM manipulation.
+          </p>
           <a href="https://rivan17rs.github.io/To-Do-List-Web-App/" target="_blank">View Project →</a>
         </div>
 
         <div class="card">
           <img src="images/pic03.png" alt="Live Chat App">
           <h3>Tico LiveChat</h3>
-          <p>Engineered a full-stack real-time messaging platform using React (frontend) and Node.js 
-			with Socket.io (backend), supporting dynamic room creation and concurrent user interactions. 
-			Demonstrates event-driven architecture, WebSocket communication, and scalable real-time system design.</p>
+          <div class="badges">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Socket.io</span>
+            <span>WebSockets</span>
+          </div>
+          <p>
+            Engineered a full-stack real-time messaging platform using React and Node.js with Socket.io,
+            supporting dynamic room creation and concurrent user interactions.
+          </p>
           <a href="https://tico-livechat-front.onrender.com" target="_blank">View Project →</a>
         </div>
 
         <div class="card">
           <img src="images/pic04.png" alt="AI Chatbot">
           <h3>Custom AI Chatbot</h3>
-          <p>Built an AI chatbot leveraging Python and Gradio with GPT API integration, 
-			implementing conversational context handling, prompt engineering, and responsive UI components. 
-			Deployed as an interactive web application, showcasing end-to-end AI integration and frontend-backend interaction.</p>
+          <div class="badges">
+            <span>Python</span>
+            <span>Gradio</span>
+            <span>GPT API</span>
+            <span>AI</span>
+          </div>
+          <p>
+            Built an AI chatbot leveraging Python and Gradio with GPT integration,
+            implementing conversational context handling and responsive UI components.
+          </p>
           <a href="https://huggingface.co/spaces/Rivan17/chatbot-Rivan" target="_blank">View Project →</a>
         </div>
 
         <div class="card">
           <img src="images/pic05.png" alt="Expense Tracker">
           <h3>FynEx Expense Tracker</h3>
-          <p>A Flask-based personal finance app with SQL storage, live USD–CRC currency conversion, 
-			and an interactive dashboard for tracking expenses and balances. 
-			Deployed on Render with a responsive design</p>
+          <div class="badges">
+            <span>Flask</span>
+            <span>SQL</span>
+            <span>Python</span>
+            <span>Full-Stack</span>
+          </div>
+          <p>
+            A Flask-based personal finance application with SQL storage, currency conversion,
+            and dashboard analytics for expense tracking and budgeting insights.
+          </p>
           <a href="https://fynex-webservice.onrender.com/" target="_blank">View Project →</a>
         </div>
 
-		<div class="card">
+        <div class="card">
           <img src="images/pic06.png" alt="Server Monitoring Dashboard">
           <h3>ServerMonitor Dashboard</h3>
-          <p>Built a monitoring dashboard aggregating system metrics and alerts to improve 
-			operational visibility and reduce incident response time.</p>
+          <div class="badges">
+            <span>Monitoring</span>
+            <span>Metrics</span>
+            <span>SRE</span>
+            <span>Observability</span>
+          </div>
+          <p>
+            Built a monitoring dashboard aggregating system metrics and alerts
+            to improve operational visibility and incident response efficiency.
+          </p>
           <a href="https://github.com/Rivan17RS/server_monitor" target="_blank">View Project →</a>
         </div>
 
-		<div class="card">
+        <div class="card">
           <img src="images/pic07.png" alt="Finance App">
-          <h3>Financial Tracker</h3>
-          <p>Built a desktop financial management system in Python featuring structured transaction tracking, 
-			categorized expense management, and real-time balance computation. Designed with a modular architecture 
-			and local data persistence to ensure privacy and reliability.</p>
+          <h3>Financial Tracker (Desktop)</h3>
+          <div class="badges">
+            <span>Python</span>
+            <span>Desktop App</span>
+            <span>OOP</span>
+            <span>Local Storage</span>
+          </div>
+          <p>
+            Desktop personal finance manager built in Python featuring structured transaction tracking,
+            categorized expenses, and real-time balance computation with local data persistence.
+          </p>
           <a href="https://github.com/Rivan17RS/Portfolio_FinanceApp" target="_blank">View Project →</a>
         </div>
 
@@ -113,84 +167,96 @@
     <section id="about" class="section alt">
       <h2>About Me</h2>
       <p>
-        I'm a hybrid Software Developer and Site Reliability Engineer who bridges the gap between application development 
-		and operational excellence. With experience in .NET web development, full-stack JavaScript (Node.js and React), 
-		and infrastructure automation, I design solutions that are not only functional, but scalable, reliable, and measurable.
-
-		Throughout my career, I've led automation initiatives using tools like Ansible and monitoring platforms, reducing 
-		repetitive operational workload by more than 60 hours per month. I've built performance dashboards and internal 
-		web tools that increased visibility into system health and directly contributed to a 35% improvement in client retention.
-
-		My strength lies in connecting clean, maintainable code with real business outcomes. 
-		I thrive in environments where engineering meets operations — optimizing processes, improving reliability, 
-		and turning manual workflows into efficient, automated systems that scale.
-
-    In addition to hands-on experience, I hold certifications in Infrastructure Automation and Agile methodologies (Scrum Fundamentals Certified), 
-    reinforcing my structured approach to scalable system design, automation, and collaborative software development.
+        I'm a hybrid Software Developer and Site Reliability Engineer who bridges the gap between
+        application development and operational excellence. With experience in .NET, full-stack JavaScript,
+        and infrastructure automation, I design scalable, reliable, and measurable solutions.
+        I have led automation initiatives that reduced operational workload by over 60 hours per month
+        and built internal dashboards that improved system visibility and client retention.
       </p>
     </section>
 
-    <!-- Certifications -->
+    <!-- Certifications (FIXED ALIGNMENT + ICONS + BADGES) -->
     <section id="certifications" class="section alt">
       <h2>Certifications & Credentials</h2>
 
-      <p>
-        Industry-recognized certifications supporting my expertise in software development, Linux systems, automation, 
-        Kubernetes, and Agile methodologies, reinforcing my hybrid profile as a Developer and SRE-focused engineer.
+      <p class="section-intro">
+        Industry-recognized certifications supporting my expertise in software development,
+        Linux systems, automation, Kubernetes, and Agile methodologies, reinforcing my hybrid
+        profile as a Developer and SRE-focused engineer.
       </p>
 
       <div class="grid">
 
-        <div class="card">
-          <h3>Associate’s Degree in Software Development</h3>
-          <p>
-            Formal academic foundation in software engineering, programming, and system design,
-            supporting my work in full-stack development and scalable system architecture.
-          </p>
-          <a href="https://acreditta.com/credential/8705bf91-4f86-4a22-b023-4522cec1cbe8?utm_source=copy&resource_type=badge&resource=8705bf91-4f86-4a22-b023-4522cec1cbe8" target="_blank">
+        <div class="card cert-card">
+          <div class="cert-header">
+            <i class="fas fa-graduation-cap cert-icon"></i>
+            <h3>Associate’s Degree in Software Development</h3>
+          </div>
+          <div class="badges">
+            <span>Software Development</span>
+            <span>Programming</span>
+            <span>OOP</span>
+          </div>
+          <a href="https://acreditta.com/credential/8705bf91-4f86-4a22-b023-4522cec1cbe8" target="_blank">
             Verify Credential →
           </a>
         </div>
 
-        <div class="card">
-          <h3>Linux Essentials</h3>
-          <p>
-            Core knowledge of Linux environments, system administration fundamentals,
-            command-line operations, and infrastructure-level troubleshooting.
-          </p>
-          <a href="https://acreditta.com/credential/a70121d0-2a7b-4dab-bf33-40710df1287e?utm_source=copy&resource_type=badge&resource=a70121d0-2a7b-4dab-bf33-40710df1287e" target="_blank">
+        <div class="card cert-card">
+          <div class="cert-header">
+            <i class="fab fa-linux cert-icon"></i>
+            <h3>Linux Essentials</h3>
+          </div>
+          <div class="badges">
+            <span>Linux</span>
+            <span>System Administration</span>
+            <span>CLI</span>
+          </div>
+          <a href="https://acreditta.com/credential/a70121d0-2a7b-4dab-bf33-40710df1287e" target="_blank">
             Verify Credential →
           </a>
         </div>
 
-        <div class="card">
-          <h3>Scripting with Python</h3>
-          <p>
-            Automation-focused scripting for backend tooling, task automation,
-            and infrastructure-related workflows using Python.
-          </p>
+        <div class="card cert-card">
+          <div class="cert-header">
+            <i class="fab fa-python cert-icon"></i>
+            <h3>Scripting with Python</h3>
+          </div>
+          <div class="badges">
+            <span>Python</span>
+            <span>Automation</span>
+            <span>Scripting</span>
+          </div>
           <a href="https://www.acreditta.com/credential/9d2873b8-e124-48ec-baa6-434dc4f38061" target="_blank">
             Verify Credential →
           </a>
         </div>
 
-        <div class="card">
-          <h3>Kubernetes Administration</h3>
-          <p>
-            Hands-on knowledge of container orchestration, deployments,
-            and cloud-native infrastructure management aligned with DevOps practices.
-          </p>
-          <a href="https://acreditta.com/credential/67e55971-6445-4eb0-a03d-c145a29bd7f2?utm_source=copy&resource_type=badge&resource=67e55971-6445-4eb0-a03d-c145a29bd7f2" target="_blank">
+        <div class="card cert-card">
+          <div class="cert-header">
+            <i class="fas fa-server cert-icon"></i>
+            <h3>Kubernetes Administration</h3>
+          </div>
+          <div class="badges">
+            <span>Kubernetes</span>
+            <span>Containers</span>
+            <span>DevOps</span>
+          </div>
+          <a href="https://acreditta.com/credential/67e55971-6445-4eb0-a03d-c145a29bd7f2" target="_blank">
             Verify Credential →
           </a>
         </div>
 
-        <div class="card">
-          <h3>Scrum Fundamentals Certified (SFC)</h3>
-          <p>
-            Understanding of Agile methodologies, sprint planning,
-            and collaborative software development in cross-functional teams.
-          </p>
+        <div class="card cert-card">
+          <div class="cert-header">
+            <i class="fas fa-sync-alt cert-icon"></i>
+            <h3>Scrum Fundamentals Certified</h3>
+          </div>
+          <div class="badges">
+            <span>Agile</span>
+            <span>Scrum</span>
+            <span>Collaboration</span>
+          </div>
           <a href="https://www.scrumstudy.com/certification/verify?type=SFC&number=969383" target="_blank">
             Verify Credential →
           </a>
@@ -199,36 +265,24 @@
       </div>
     </section>
 
-  
-	<!-- Contact -->
-	<section id="contact" class="section">
-		<h2>Let's Work Together</h2>
-		<p>Open to full-time roles, freelance work, or collaborations.</p>
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Let's Work Together</h2>
+      <p>Open to full-time roles, freelance work, or collaborations.</p>
 
-		<form id="contact-form">
-			<input type="text" name="name" placeholder="Your Name" required>
-			<input type="email" name="email" placeholder="Your Email" required>
-			<input type="text" name="title" placeholder="Subject" required>
-			<textarea name="message" placeholder="Your Message" required></textarea>
-			<button type="submit" class="btn">Send Message</button>
-		</form>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="title" placeholder="Subject" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
 
-		<p id="form-status" style="margin-top: 10px;"></p>
-	</section>
+      <p id="form-status" style="margin-top: 10px;"></p>
+    </section>
 
-  	</main>
+  </main>
 
-		<!-- JS FILES (ORDER MATTERS) -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/util.js"></script>
-
-		<!-- EmailJS BEFORE main.js -->
-		<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-		<script src="assets/js/main.js"></script>
-	</body>
+  <script src="assets/js/main.js"></script>
+</body>
 </html>
