@@ -8,7 +8,6 @@
 		$body = $('body'),
 		$nav = $('#nav');
 
-	// Breakpoints.
 	breakpoints({
 		wide:      [ '961px',  '1880px' ],
 		normal:    [ '961px',  '1620px' ],
@@ -17,21 +16,18 @@
 		mobile:    [ null,     '736px'  ]
 	});
 
-	// Remove preload
 	$window.on('load', function() {
 		window.setTimeout(function() {
 			$body.removeClass('is-preload');
 		}, 100);
 	});
 
-	// Scrolly
 	$('.scrolly').scrolly();
 
+	/* EmailJS Contact Form */
 
-	// Contact Form - EmailJS
 	(function () {
 
-		// Initialize EmailJS (PUBLIC KEY)
 		emailjs.init("P666zB8mT-Vr6UtaE");
 
 		const form = document.getElementById("contact-form");
@@ -45,22 +41,19 @@
 
 			e.preventDefault();
 
-			// Prevent double submit
 			button.disabled = true;
 
-			// Reset status state
 			status.classList.remove("success", "error");
 			status.style.opacity = 1;
 			status.innerText = "Sending message...";
 
 			emailjs.sendForm(
-				"service_a4twy6d", // EmailJS Service ID
-				"template_xdjk815", // EmailJS Template ID
+				"service_a4twy6d",
+				"template_xdjk815",
 				form
 			)
 			.then(function () {
 
-				status.classList.remove("error");
 				status.classList.add("success");
 
 				status.style.opacity = 0;
@@ -78,7 +71,6 @@
 
 				console.error("EmailJS Error:", error);
 
-				status.classList.remove("success");
 				status.classList.add("error");
 
 				status.style.opacity = 0;
